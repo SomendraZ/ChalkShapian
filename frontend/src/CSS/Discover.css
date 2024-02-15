@@ -1,4 +1,46 @@
 @media only screen and (min-width: 550px) {
+  .imgDes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2.5vw;
+  }
+
+  #titleSection,
+  #artistSection,
+  #descSection {
+    width: 20vw;
+    margin-bottom: 2vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    box-shadow: 0.15vw 0.2vw 0.2vw #ffffff;
+  }
+
+  #titleSection,
+  #artistSection,
+  #descSection {
+    background-color: #484848;
+  }
+
+  .label {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-bottom: 1vw;
+    color: #ff9100;
+  }
+
+  .titleModal,
+  .artistModal,
+  .descModal {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1vw;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0.1vw 0.15vw 0.2vw rgba(255, 255, 255, 0.2);
+  }
+
   .contAll {
     color: #000000;
     font-family: "Chakra Petch", sans-serif;
@@ -29,6 +71,7 @@
     background: #000000;
     border-radius: 1.5vw 1.5vw 0px 0px;
     width: 96vw;
+    height: 66vh;
     margin: 0 2vw;
     padding-top: 5.5vw;
   }
@@ -228,7 +271,7 @@
     -webkit-text-stroke-color: #000000;
     border: 0.25vw solid black;
   }
-  #info{
+  #info {
     display: flex;
     flex-direction: row;
   }
@@ -238,6 +281,7 @@
     background: #000000;
     border-radius: 1.5vw 1.5vw 0px 0px;
     width: 94vw;
+    height: 66vh;
     padding-top: 1vw;
     margin-left: 3vw;
   }

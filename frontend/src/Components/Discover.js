@@ -11,11 +11,15 @@ const Discover = () => {
   const [openmodal, setOpenModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
   const [selectedTitle, setSelectetTitle] = useState(null);
+  const [selectedArtist, setSelectedArtist] = useState(null);
+  const [selecteddesc, setSelectedDesc] = useState(null);
 
   const imgpopup = (post) => {
     setOpenModal(!openmodal);
     setSelectedPost(post);
     setSelectetTitle(post.title);
+    setSelectedArtist(post.artist);
+    setSelectedDesc(post.description);
   };
 
   useEffect(() => {
@@ -23,7 +27,7 @@ const Discover = () => {
       .then((snapshot) => {
         let postsArr = [];
         snapshot.docs.forEach((doc) => {
-          postsArr.push({ ...doc.data(), id: doc.id }); 
+          postsArr.push({ ...doc.data(), id: doc.id });
         });
 
         // Sort posts in descending order by timestamp
@@ -100,7 +104,20 @@ const Discover = () => {
               </span>
               <div id="info">
                 <img src={selectedPost.imgURL} alt="" id="imgModal" />
-                <div className="titleModal">{selectedTitle}</div>
+                <div className="imgDes">
+                  <div id="titleSection">
+                    <div className="label">Title</div>
+                    <div className="titleModal">{selectedTitle}</div>
+                  </div>
+                  <div id="artistSection">
+                    <div className="label">Artist</div>
+                    <div className="artistModal">{selectedArtist}</div>
+                  </div>
+                  <div id="descSection">
+                    <div className="label">Description</div>
+                    <div className="descModal">{selecteddesc}</div>
+                  </div>
+                </div>
               </div>
             </div>
           ) : null}
