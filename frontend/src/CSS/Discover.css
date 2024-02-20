@@ -71,9 +71,10 @@
     background: #000000;
     border-radius: 1.5vw 1.5vw 0px 0px;
     width: 96vw;
-    height: 66vh;
+    min-height: 66vh;
     margin: 0 2vw;
     padding-top: 5.5vw;
+    padding-bottom: 4vw;
   }
   .discoverBar {
     width: 75vw;
